@@ -6,38 +6,44 @@ using namespace std;
 class Graph{
 protected:
   int numOfVertices;
-  vector<vector<bool>> matrix;
+  vector<vector<int>> adjLists;
 public:
   Graph(int n){
     numOfVertices = n;
-    vector<bool> tempRowVector(numOfVertices,false);
     for(int i=0; i<numOfVertices; i++){
-      matrix.push_back(tempRowVector);
+      adjLists.push_back({});
     }
   }
   ~Graph(){
     
   }
   void addEdge(int i, int j){
-    matrix[i][j] = true;
+    adjLists[i].push_back(j);
   }
   void removeEdge(int i, int j){
-    matrix[i][j] = false;
-  }
-  bool hasEdge(int i, int j){
-    return matrix[i][j];
-  }
-  void outEdges(int i, vector<int> &edges){
-    for(int j=0; j<numOfVertices; j++){
-      if(matrix[i][j]){
-	edges.push_back(j);
+    for(int k=0; k<adjLists[i].size(); k++){
+      if(adjLists[i][k] == j){
+	adjLists[i].erase(adjLists[i].begin()+k);
       }
     }
   }
+  bool hasEdge(int i, int j){
+    for(int k=0; k<adjLists[i].size(); k++){
+      if(adjLists[i][k] == j){
+	return true;
+      }
+    }
+    return false;
+  }
+  void outEdges(int i, vector<int> &edges){
+    edges = adjLists[i];
+  }
   void inEdges(int i, vector<int> &edges){
     for(int j=0; j<numOfVertices; j++){
-      if(matrix[j][i]){
-	edges.push_back(j);
+      for(int k=0; k<adjLists[j].size(); k++){
+	  if(adjLists[j][k]==i){
+	    edges.push_back(j);
+	  }
       }
     }
   }
@@ -77,3 +83,4 @@ int main(){
   cout<<"Number of vertices: "<<g.vertices()<<endl;
   return 0;
 }
+
