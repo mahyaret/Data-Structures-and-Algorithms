@@ -8,16 +8,22 @@ using namespace std;
 class Node{
 public:
   int data;
-  int numOfNodes;
-  Node *head;
   Node *next;
-  Node *tail;
   Node(int x){
     data = x;
-    numOfNodes = 0;
-    head=next=tail= NULL;
+    next= NULL;
   }
-  ~Node(){
+};
+class LinkedList{
+public:
+  Node *head;
+  Node *tail;
+  int numOfNodes;
+  LinkedList(){
+    head = tail = NULL;
+    numOfNodes = 0;
+  }
+  ~LinkedList(){
     Node *tempHeadHolder = head;
     while(tempHeadHolder!=NULL){
       Node *tempPlaceHolder;
@@ -28,7 +34,7 @@ public:
   //Stack
   void push(int x){
     Node *newNode = new Node(x);
-    newNode->next = this;
+    newNode->next = head;
     //cout<<newNode->data<<" ";
     head = newNode;
     if(numOfNodes==0){
@@ -67,14 +73,14 @@ public:
 };
 
 int main(){
-  Node *n = new Node(1);
-  //cout<<n->data<<" ";
-  n->push(2);
-  n->push(3);
-  n->push(4);
-  n->push(5);
+  LinkedList *list = new LinkedList();
+  //cout<<list->data<<" ";
+  list->push(1);
+  list->push(2);
+  list->push(3);
+  list->push(4);
 
-  cout<<n->data<<" "<<n->next->data;
+  cout<<list->head->data<<" "<<list->head->next->data;
   cout<<endl;
   return 0;
 }
