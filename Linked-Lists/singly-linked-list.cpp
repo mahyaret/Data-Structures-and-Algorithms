@@ -35,7 +35,6 @@ public:
   void push(int x){
     Node *newNode = new Node(x);
     newNode->next = head;
-    //cout<<newNode->data<<" ";
     head = newNode;
     if(numOfNodes==0){
       tail = newNode;
