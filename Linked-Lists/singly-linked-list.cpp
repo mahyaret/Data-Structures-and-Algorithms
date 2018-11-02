@@ -71,16 +71,28 @@ public:
     return pop();
   }
 };
+//Overloading << operator
+ostream& operator<<(ostream &out, const LinkedList *param){
+  Node *obj = param->head;
+  while(obj!=NULL){
+    out<<obj->data<<" ";
+    obj = obj->next;
+  }
+  return out;
+}
 
 int main(){
   LinkedList *list = new LinkedList();
-  //cout<<list->data<<" ";
+
   list->push(1);
   list->push(2);
   list->push(3);
   list->push(4);
+  list->push(5);
 
-  cout<<list->head->data<<" "<<list->head->next->data;
+  cout<<list<<endl;
+  //cout<<list->head->data<<" "<<list->head->next->data<<endl;
+  //cout<<list->tail->data;
   cout<<endl;
   return 0;
 }
