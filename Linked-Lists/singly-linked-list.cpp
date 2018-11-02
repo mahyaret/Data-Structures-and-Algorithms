@@ -90,9 +90,20 @@ int main(){
   list->push(4);
   list->push(5);
 
-  cout<<list<<endl;
-  //cout<<list->head->data<<" "<<list->head->next->data<<endl;
-  //cout<<list->tail->data;
+  cout<<"push(1..5): "<<list<<endl;
+
+  list->pop();
+
+  cout<<"pop(): "<<list<<endl;
+
+  list->remove();
+
+  cout<<"remove(): "<<list<<endl;
+
+  list->add(6);
+
+  cout<<"add(6): "<<list;
+ 
   cout<<endl;
   return 0;
 }
