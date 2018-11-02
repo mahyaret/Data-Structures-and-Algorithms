@@ -70,15 +70,35 @@ public:
   void deleteNode(int x){
     deleteNode(root,x);
   }
-  void inorderTraverse(Node* subRoot){
+  void inOrderTraverse(Node* subRoot){
     if(subRoot!=NULL){
-      inorderTraverse(subRoot->left);
+      inOrderTraverse(subRoot->left);
       cout<<subRoot->data<<" ";
-      inorderTraverse(subRoot->right);
+      inOrderTraverse(subRoot->right);
     }
   }
-  void inorderTraverse(){
-    inorderTraverse(root);
+  void preOrderTraverse(Node* subRoot){
+    if(subRoot!=NULL){
+      cout<<subRoot->data<<" ";
+      preOrderTraverse(subRoot->left);
+      preOrderTraverse(subRoot->right);
+    }
+  }
+  void postOrderTraverse(Node* subRoot){
+    if(subRoot!=NULL){
+      postOrderTraverse(subRoot->left);
+      postOrderTraverse(subRoot->right);
+      cout<<subRoot->data<<" ";
+    }
+  }
+  void inOrderTraverse(){
+    inOrderTraverse(root);
+  }
+  void preOrderTraverse(){
+    preOrderTraverse(root);
+  }
+  void postOrderTraverse(){
+    postOrderTraverse(root);
   }
 };
 
@@ -97,7 +117,14 @@ int main(){
   root->insert(9);
   root->insert(13);
 
-  root->inorderTraverse();
+  cout<<"inOrderTraverse: ";
+  root->inOrderTraverse();
+  cout<<endl;
+  cout<<"preOrderTraverse: ";
+  root->preOrderTraverse();
+  cout<<endl;
+  cout<<"postOrderTraverse: ";
+  root->postOrderTraverse();
   cout<<endl;
   return 0;
 }
