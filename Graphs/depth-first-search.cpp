@@ -1,4 +1,7 @@
-//The depth-first-search algorithm is similar to the standard algorithm for traversing binary trees; it first fully explores one subtree before returning to the current node and then exploring the other subtree. Another way to think of depth-first-search is by saying that it is similar to breadth-first search except that it uses a stack instead of a queue.
+//The depth-first-search algorithm is similar to the standard algorithm for traversing binary trees; it first 
+//fully explores one subtree before returning to the current node and then exploring the other subtree. 
+//Another way to think of depth-first-search is by saying that it is similar to breadth-first search except that it 
+//uses a stack instead of a queue.
 //Although depth-first-search may best be thought of as a recursive algorithm, recursion is not the best way to implement it.
 //The depth-first-search algorithm can be used to detect cycles in the graph.
 #include <iostream>
