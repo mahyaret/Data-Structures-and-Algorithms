@@ -1,4 +1,5 @@
-//The bread-first-search algorithm starts at a vertex and visits, first the neighbours of it, then the neighbours of the neighbours of ti, and so on.
+//The bread-first-search algorithm starts at a vertex and visits, first the neighbours of it, then the neighbours of 
+//the neighbours of it, and so on.
 //A particularly useful application of the breadth-first-search algorithm is, therefore, in computing shortest paths.
 //This algorithm is best suited to graphs represented using an adjacency list representation.
 
