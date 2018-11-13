@@ -1,4 +1,6 @@
-/*Quicksort: Pick a random pivot element, x, from a; partition a into the set of elements less than x, the set of elements equal to x, and the set of elements greater than x; and, finally, recursively sort the first and third sets in this partition.*/
+/*Quicksort: Pick a random pivot element, x, from a; partition a into the set of elements less than x, 
+the set of elements equal to x, and the set of elements greater than x; and, finally, recursively sort the 
+first and third sets in this partition.*/
 
 #include <iostream>
 #include <vector>
