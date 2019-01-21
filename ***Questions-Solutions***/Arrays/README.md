@@ -11,6 +11,8 @@ Here are some important question as well as their solutions:
   
   Q3. Find out if one array is a rotation of another array.
 
+  Q4. Find pair with given summation in array.
+  
 # Useful Links:
 https://www.techiedelight.com/list-of-problems/
 

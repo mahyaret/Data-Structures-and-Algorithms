@@ -10,6 +10,7 @@ Here are some important question as well as their solutions:
   Q2. Find common elements in two sorted arrays.
   
   Q3. Find out if one array is a rotation of another array.
+  ...
 
 ## Two-Dimensional Arrays
   Q1. Assign numbers in Minesweeper.
@@ -19,18 +20,21 @@ Here are some important question as well as their solutions:
   Q3. Rotate a matrix by 90 degrees.
   
   Q4. Rotate a matrix by 90 degrees in-place.
-
+  ...
+  
 ## Strings
   Q1. Find the non-repeating character.
   
   Q2. Find out if two strings are one edit away.
+  ...
 
 ## Linked Lists and Trees
   Q1. Find the N-th element of a linked list.
-  
+
   Q2. Find out if a Binary tree is a Binary Search Tree.
   
   Q3. Find the Lowest Common Ancestor.
+  ...
 
 # Useful Links:
 https://www.techiedelight.com/list-of-problems/
