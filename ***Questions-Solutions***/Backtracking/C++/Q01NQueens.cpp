@@ -32,6 +32,7 @@ bool isSafe(std::vector<std::vector<char>> chessMat, int row, int column)
     }
   return true;
 }
+	      
 
 void displayMat(std::vector<std::vector<char>> chessMat)
 {
@@ -45,18 +46,37 @@ void displayMat(std::vector<std::vector<char>> chessMat)
     }
 }
 
+void nQueen(std::vector<std::vector<char>> chessMat, int row=0)
+{
+  if (row == chessMat.size())
+    {
+      displayMat(chessMat);
+      std::cout<<std::endl;
+      return;
+    }
+  for (int i = 0; i < chessMat.size(); i++)
+    {
+      if(isSafe(chessMat, row, i))
+	{
+	  chessMat[row][i] = 'Q';
+	  nQueen(chessMat, row+1);
+	  //chessMat[row][i] = '+';
+	}
+    }
+}
+
 int main()
 {
-  std::vector<std::vector<char>> chessMat = {{'o','o','Q','o'},
-					     {'o','o','o','o'},
-					     {'o','o','o','o'},
-					     {'o','o','o','o'}};
+  std::vector<std::vector<char>> chessMat = {{'+','+','+','+'},
+					     {'+','+','+','+'},
+					     {'+','+','+','+'},
+					     {'+','+','+','+'}};
 
-  displayMat(chessMat);
-  std::cout<<"(2,0) :"<<isSafe(chessMat,2,0)<<std::endl;
-  std::cout<<"(1,1) :"<<isSafe(chessMat,1,1)<<std::endl;
-  std::cout<<"(2,3) :"<<isSafe(chessMat,2,3)<<std::endl;
-  std::cout<<"(3,2) :"<<isSafe(chessMat,3,2)<<std::endl;
-  
+  //displayMat(chessMat);
+  // std::cout<<"(2,0) :"<<isSafe(chessMat,2,0)<<std::endl;
+  //std::cout<<"(1,1) :"<<isSafe(chessMat,1,1)<<std::endl;
+  //std::cout<<"(2,3) :"<<isSafe(chessMat,2,3)<<std::endl;
+  //std::cout<<"(3,2) :"<<isSafe(chessMat,3,2)<<std::endl;
+  nQueen(chessMat);
   return 0;
 }
