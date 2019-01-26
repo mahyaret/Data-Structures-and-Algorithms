@@ -60,7 +60,7 @@ void nQueen(std::vector<std::vector<char>> chessMat, int row=0)
 	{
 	  chessMat[row][i] = 'Q';
 	  nQueen(chessMat, row+1);
-	  //chessMat[row][i] = '+';
+	  chessMat[row][i] = '+';
 	}
     }
 }
