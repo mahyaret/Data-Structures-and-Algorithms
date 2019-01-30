@@ -23,7 +23,7 @@ bool isIdentical(Node* x, Node* y)
       return true;
     }
 
-  return (x && y) && (x->data == y->data) &&
+  return (x!=NULL) && (y!=NULL) && (x->data == y->data) &&
     isIdentical(x->left, y->left) &&
     isIdentical(x->right, y->right);
 }
