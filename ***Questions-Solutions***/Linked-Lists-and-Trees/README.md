@@ -11,6 +11,8 @@ Here are some important question as well as their solutions:
   
   Q3. Find the Lowest Common Ancestor.
 
+  Q4. Check if two binary trees are identical
+  
 # Useful Links:
 https://www.techiedelight.com/list-of-problems/
 
