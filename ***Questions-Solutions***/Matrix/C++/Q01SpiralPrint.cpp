@@ -1,14 +1,57 @@
 #include <iostream>
 #include <vector>
 
-void printSpiralOrder(std::vector<std::vector<int>> matrix, int m, int n)
-{
-  //Not complete!
-}
 
 void printSpiralOrder(std::vector<std::vector<int>> matrix)
 {
-  printSpiralOrder(matrix, matrix.size(), matrix[0].size());
+  int top = 0;
+  int bottom = matrix.size()-1;
+  int left = 0;
+  int right = matrix[0].size()-1;
+
+  while (true)
+    {
+      if(left > right)
+	{
+	  break;
+	}
+      // print top row
+      for(int i = left; i<= right; i++)
+	{
+	  std::cout<<matrix[top][i]<<" ";
+	}
+      top++;
+      if(top > bottom)
+	{
+	  break;
+	}
+      // print right column
+      for(int i = top; i<=bottom; i++)
+	{
+	  std::cout<<matrix[i][right]<<" ";
+	}
+      right--;
+      if(left>right)
+	{
+	  break;
+	}
+      // print bottom row
+      for (int i=right; i >= left; i--)
+	{
+	  std::cout<<matrix[bottom][i]<<" ";
+	}
+      bottom--;
+      if(top>bottom)
+	{
+	  break;
+	}
+      // print left column
+      for (int i = bottom; i>= top; i--)
+	{
+	  std::cout<<matrix[i][left]<<" ";
+	}
+      left++;
+    }
 }
 
 int main ()
