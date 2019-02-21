@@ -5,24 +5,24 @@
 
 class queue
 {
-  int *data;  //array to store queue elements
-  int maxSize;//maximum capacity of the queue
-  int front;  //front points to front element in the queue
-  int rear;   //rear points to last element in the queue
-  int size;   //current capacity of the queue
+  int* _data;  //array to store queue elements
+  int  _maxSize;//maximum capacity of the queue
+  int  _front;  //front points to front element in the queue
+  int  _rear;   //rear points to last element in the queue
+  int  _size;   //current capacity of the queue
 public:
   queue(int size)
   {
-    data = new int[size]();
-    maxSize = size;
-    front = 0;
-    rear = -1;
-    size = 0;
+    _data = new int[size]();
+    _maxSize = size;
+    _front = 0;
+    _rear = -1;
+    _size = 0;
   }
   // Utility function to return the size of the queue
   int size(queue *pt)
   {
-    return size;
+    return _size;
   }
 
   // Utility function to check if the queue is empty or not
@@ -37,24 +37,24 @@ public:
       {
 	std::cout<<"UnderFlow!"<<std::endl;
       }
-    return data[front];
+    return _data[_front];
   }
 
   // Utility function to add an element x in the queue
   void enQueue(queue *pt, int x)
   {
-    if (size(pt) == maxSize)
+    if (size(pt) == _maxSize)
       {
 	std::cout<<"OverFlow!"<<std::endl;
       }
 
-    std::cout<<"Inserting "<<x<<std::endl;
+    std::cout<<"Inserting "<<x<<" ";
 
-    rear = (rear + 1)%maxSize; // Circular queue
-    data[rear] = x;
-    size++;
+    _rear = (_rear + 1)%_maxSize; // Circular queue
+    _data[_rear] = x;
+    _size++;
 
-    std::cout<<"front = "<<front<<", rear"<<rear<<std::endl;
+    std::cout<<"front = "<<_front<<" rear = "<<_rear<<std::endl;
   }
 
   // Utility function to remove element from the queue
@@ -65,16 +65,44 @@ public:
 	std::cout<<"UnderFlow!"<<std::endl;
       }
 
-    std::cout<<"Removing "<< front
-  
+    std::cout<<"Removing "<< front(pt)<<" ";
 
-  
+    _front = (_front + 1)%_maxSize;
+    _size--;
+
+    std::cout<<"front = "<<_front<< " rear = "<< _rear<<std::endl;
+  }
 };
 
 
 
 int main()
 {
+  queue *pt = new queue(5);
 
+  pt->enQueue(pt, 1);
+  pt->enQueue(pt, 2);
+  pt->enQueue(pt, 3);
+  pt->enQueue(pt, 4);
+
+  pt->deQueue(pt);
+  pt->deQueue(pt);
+  pt->deQueue(pt);
+  pt->deQueue(pt);
+
+  pt->enQueue(pt, 5);
+  pt->enQueue(pt, 6);
+
+  std::cout<<"size = "<< pt->size(pt) << std::endl;
+
+  if(pt->isEmpty(pt))
+    {
+      std::cout<<"Queue is empty."<<std::endl;
+    }
+  else
+    {
+      std::cout<<"Queue is not empty."<<std::endl;
+    }
+  
   return 0;
 }
