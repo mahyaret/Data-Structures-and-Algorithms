@@ -12,7 +12,7 @@ class Trie
 public:
   Trie()
   {
-    isLeaf = false;
+    _isLeaf = false;
   }
 
   //iterative function to insert a string in Trie
@@ -73,5 +73,22 @@ public:
 	//recursive for the node corresponding to next character in
 	// the string and if it returns true, delete current node
 	// (if it non-leaf)
-	if (current != NULL && _map.find(*str) != 
+	if (current != NULL && _map.find(*str) != _map.end() &&
+	    deletion(_map[*str], str + 1) && _isLeaf == false)
+	  {
+	    if(!haveChildren(current))
+	      {
+		delete current;
+		current = NULL;
+		return true;
+	      }
+	    else
+	      {
+		return false;
+	      }
+	  }
+      }
+
+    //if we have reached the end of the string
+    
 };
