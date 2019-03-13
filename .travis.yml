@@ -16,13 +16,13 @@ install:
 
 
 before_script: 
-- cd ${TRAVIS_BUILD_DIR}
+#- cd ${TRAVIS_BUILD_DIR}
 - cd Binary\ Search\ Tree
 - lcov --directory . --zerocounters
 
 # Compiler selection
 compiler:
-  - clang
+#  - clang
   - g++
 
 
