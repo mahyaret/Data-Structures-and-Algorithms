@@ -2,7 +2,6 @@
 
 [![Build Status](https://travis-ci.org/mahyaret/Data-Structures-and-Algorithms.svg?branch=master)](https://travis-ci.org/mahyaret/Data-Structures-and-Algorithms) 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/177cf2ec7dfe450ca11ec33c8ac0919b)](https://app.codacy.com/app/mahyar.etedal/Data-Structures-and-Algorithms?utm_source=github.com&utm_medium=referral&utm_content=mahyaret/Data-Structures-and-Algorithms&utm_campaign=Badge_Grade_Dashboard)
-[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 While reading the book called "Cracking the Coding Interview", I've been implementing some basic concepts in this book and uploaded them to this repo for my reference.
 
