@@ -1,7 +1,7 @@
 # Data-Structures-and-Algorithms
 
 [![Build Status](https://travis-ci.org/mahyaret/Data-Structures-and-Algorithms.svg?branch=CodeCoverageFeature)](https://travis-ci.org/mahyaret/Data-Structures-and-Algorithms) 
-[![codecov](https://codecov.io/gh/mahyaret/Data-Structures-and-Algorithms/branch/master/graph/badge.svg)](https://codecov.io/gh/mahyaret/Data-Structures-and-Algorithms)
+[![codecov](https://codecov.io/gh/mahyaret/Data-Structures-and-Algorithms/branch/CodeCoverageFeature/graph/badge.svg)](https://codecov.io/gh/mahyaret/Data-Structures-and-Algorithms)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/177cf2ec7dfe450ca11ec33c8ac0919b)](https://app.codacy.com/app/mahyar.etedal/Data-Structures-and-Algorithms?utm_source=github.com&utm_medium=referral&utm_content=mahyaret/Data-Structures-and-Algorithms&utm_campaign=Badge_Grade_Dashboard)
 
 
