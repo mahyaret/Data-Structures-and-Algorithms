@@ -28,7 +28,7 @@ compiler:
 # Build steps
 script: 
 #  - cd ${TRAVIS_BUILD_DIR}
-  - cd Binary\ Search\ Tree
+  - cd BinarySearchTree
   - make && ./test-library.out
 
 
