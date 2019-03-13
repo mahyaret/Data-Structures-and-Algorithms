@@ -33,13 +33,13 @@ int main()
 {
 	int result;
 	
-	printf("Running Example tests .. \n");
+	cout<<"Running Example tests .. \n";
 	result = test_all();
 
 	if (result == 0) 
-		printf ("tests passed.\n");
+	  cout<<"tests passed.\n";
 	else
-		printf ("tests failed.\n");
+	  cout<<"tests failed.\n";
 
     return result;  /* remember the value 0 is considered passing in a travis-ci sense */
 
