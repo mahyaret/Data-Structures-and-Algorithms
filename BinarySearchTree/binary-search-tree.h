@@ -75,14 +75,14 @@ public:
   {
     if(subRoot!=NULL){
       inOrderTraverse(subRoot->left);
-      cout<<subRoot->data<<" ";
+      std::cout<<subRoot->data<<" ";
       inOrderTraverse(subRoot->right);
     }
   }
   void preOrderTraverse(Node* subRoot)
   {
     if(subRoot!=NULL){
-      cout<<subRoot->data<<" ";
+      std::cout<<subRoot->data<<" ";
       preOrderTraverse(subRoot->left);
       preOrderTraverse(subRoot->right);
     }
@@ -92,7 +92,7 @@ public:
     if(subRoot!=NULL){
       postOrderTraverse(subRoot->left);
       postOrderTraverse(subRoot->right);
-      cout<<subRoot->data<<" ";
+      std::cout<<subRoot->data<<" ";
     }
   }
   void inOrderTraverse()

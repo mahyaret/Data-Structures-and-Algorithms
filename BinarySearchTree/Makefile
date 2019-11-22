@@ -2,7 +2,7 @@
 CC = g++
 CFLAGS = -I. -Wall -ftest-coverage -fprofile-arcs
 DEPS = binary-search-tree.h
-OBJ = binary-search-tree.o test-binary-search-tree.o
+OBJ = test-binary-search-tree.o
 
 %.o: %.cpp $(DEPS)
 	$(CC) -c -o $@ $< $(CFLAGS) 
